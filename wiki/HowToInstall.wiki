@@ -1,0 +1,25 @@
+#summary A short how-to in Russian how to install "sah" xkb keyboard layout
+
+= Introduction =
+
+Add your content here.
+
+
+= Интструкция =
+
+Этот файл надо скопировать в /etc/X11/xkb/symbols/pc/ (или где ваши xkb файлы лежат). Внимание, если у вас машина PC, то Файл надо положить в поддиректорию /symbols/pc/ а не просто /symbols/ иначе KDE его не найдет.
+
+Затем открываете файл /etc/X11/xkb/rules/xfree86.lst и добавляете строку:
+ sah Sakha
+
+...желательно воткнуть её по алфавиту, сразу за "ru", чтобы потом не потерять. Всё. После этого в KDE в настройках многоязыковой клавиатуры должен появиться язык "Sakha", правда без флага, но это уже мелочи.
+
+Если кто найдёт как флаг воткнуть, можете тут продолжить инструкцию. Тоже для Гнома, хорошо бы, кто-нть прикрутил эту раскладку для Гнома тоже. Для тех, кто любит настройки xkb руками крутить, я думаю, итак всё уже понятно.
+
+PS: Вместо /etc/X11/xkb/ настройки xkb могут оказаться в /usr/X11R6/lib/X11/xkb/ или в любом другом месте. Ищите внимательно. 
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
