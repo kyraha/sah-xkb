@@ -1,31 +1,11 @@
-// $Xorg: sah,v 1.1 2004/12/04 19:54:43 cpqbld Exp $
 //
 // sakha cyrillic keyboard
-// Kyraha http://www.kyraha.com/
+// 2006 Kyraha http://michael.kyraha.com/
 
-partial default alphanumeric_keys 
+partial alphanumeric_keys 
 xkb_symbols "basic" {
-
-    name[Group1]= "Sakha";
-
-    key	<AE01> {	[	 question,	    exclam 	]	};
-    key	<AE02> {	[	numerosign,	  quotedbl	]	};
-    key	<AE08> {	[	semicolon,	  asterisk	]	};
-    key	<AE09> {	[	    colon,	 parenleft	]	};
-    key	<AE10> {	[	  percent,	parenright	]	};
-    key	<AE11> {	[	    minus,	underscore	]	};
-    key	<AE12> {	[	    equal,	      plus	]	};
-    key	<BKSL> {	[	backslash,           slash	]	};
-    key	<AB10> {	[	   period,	     comma	]	};
-    key <LSGT> {	[            less,         greater      ]       };
-
-key.type[group1]="ALPHABETIC";
-
-    key	<AE03> {	[	0x010004BB,	0x010004BA	]	};
-    key	<AE04> {	[	0x010004E9,	0x010004E8	]	};
-    key	<AE05> {	[	0x01000495,	0x01000494	]	};
-    key	<AE06> {	[	0x010004AF,	0x010004AE	]	};
-    key	<AE07> {	[	0x010004A5,	0x010004A4	]	};
+    name[Group1]= "Russian";
+    key.type[group1]="ALPHABETIC";
     key	<TLDE> {	[     Cyrillic_io,     Cyrillic_IO	]	};
     key	<AD01> {	[ Cyrillic_shorti, Cyrillic_SHORTI	]	};
     key	<AD02> {	[    Cyrillic_tse,    Cyrillic_TSE	]	};
@@ -59,8 +39,107 @@ key.type[group1]="ALPHABETIC";
     key	<AB07> {	[Cyrillic_softsign,Cyrillic_SOFTSIGN	]	};
     key	<AB08> {	[     Cyrillic_be,     Cyrillic_BE	]	};
     key	<AB09> {	[     Cyrillic_yu,     Cyrillic_YU	]	};
+};
 
-key.type[group2]="TWO_LEVEL";
+partial default alphanumeric_keys 
+xkb_symbols "kyraha" {
+    include "pc/sah(basic)"
+    name[Group1]= "Sakha";
 
+    key.type[group1]="TWO_LEVEL";
+    key	<AE01> {	[	 question,	    exclam 	]	};
+    key	<AE02> {	[	numerosign,	  quotedbl	]	};
+    key	<AE08> {	[	semicolon,	  asterisk	]	};
+    key	<AE09> {	[	    colon,	 parenleft	]	};
+    key	<AE10> {	[	  percent,	parenright	]	};
+    key	<AE11> {	[	    minus,	underscore	]	};
+    key	<AE12> {	[	    equal,	      plus	]	};
+    key	<BKSL> {	[	backslash,           slash	]	};
+    key	<AB10> {	[	   period,	     comma	]	};
+    key <LSGT> {	[            less,         greater      ]       };
+
+    key.type[group1]="ALPHABETIC";
+    key	<AE03> {	[	0x010004BB,	0x010004BA	]	};
+    key	<AE04> {	[	0x010004E9,	0x010004E8	]	};
+    key	<AE05> {	[	0x01000495,	0x01000494	]	};
+    key	<AE06> {	[	0x010004AF,	0x010004AE	]	};
+    key	<AE07> {	[	0x010004A5,	0x010004A4	]	};
+
+};
+
+partial alphanumeric_keys 
+xkb_symbols "universal" {
+    include "pc/sah(basic)"
+    name[Group1]= "Sakha(Universal)";
+
+    key.type[group1]="ALPHABETIC";
+
+    key <TLDE> { [	U04EB,			U04EA			] }; // Barred O with umlaut
+    key	<AE01> {	[	0x010004BB,	0x010004BA	]	};
+    key <AE02> { [	U0461,			U0460			] }; // Omega
+    key <AE03> { [	U04E1,			U04E0			] }; // Dze
+    key	<AE04> {	[	0x010004E9,	0x010004E8	]	};
+    key	<AE05> {	[	0x01000495,	0x01000494	]	};
+    key	<AE06> {	[	0x010004AF,	0x010004AE	]	};
+    key	<AE07> {	[	0x010004A5,	0x010004A4	]	};
+    key <AE08> { [	Cyrillic_i_macron,	Cyrillic_I_macron	] }; // I with macron
+    key <AE09> { [	Cyrillic_u_macron,	Cyrillic_U_macron	] }; // U with macron
+    key <AE10> { [	U04C8,			U04C7			] }; // N with hook
+    key <AE11> { [	U04C4,			U04C3			] }; // K with hook
+    key <AE12> { [	U048B,			U048A			] }; // Short I with tail
+}
+
+partial alphanumeric_keys 
+xkb_symbols "alt" {
+    // 2008/04/23 Yakov Aleksandrov <bertjickty@yandex.ru>
+    // 2008/04/23 Anatoliy Zhozhikov <jav@sitc.ru>
+    // 2008/04/23 Aleksandr Varlamov
+    include "pc/sah(basic)"
+    name[Group1]= "Russia - Yakut";
+
+    key.type[group1]="FOUR_LEVEL_ALPHABETIC";
+
+    key <TLDE> { [	Cyrillic_io,		Cyrillic_IO,
+    			U04EB,			U04EA			] };
+    key <AD01> { [	Cyrillic_shorti,	Cyrillic_SHORTI,
+			U048B,			U048A			] };
+    key <AD03> { [	Cyrillic_u,		Cyrillic_U,
+			Cyrillic_u_straight,	Cyrillic_U_straight	] };
+    key <AD04> { [	Cyrillic_ka,		Cyrillic_KA,
+    			U04C4,			U04C3			] };
+    key <AD06> { [	Cyrillic_en,		Cyrillic_EN,
+			U04A5,			U04A4			] };
+    key <AD07> { [	Cyrillic_ghe,		Cyrillic_GHE,
+			U0495,			U0494			] };
+    key <AD10> { [	Cyrillic_ze,		Cyrillic_ZE,
+    			U04E1,			U04E0			] };
+    key <AD11> { [	Cyrillic_ha,		Cyrillic_HA,
+			Cyrillic_shha,		Cyrillic_SHHA		] };
+    key <AC07> { [	Cyrillic_o,		Cyrillic_O,
+			Cyrillic_o_bar,		Cyrillic_O_bar		] };
+    key <AC10> { [	Cyrillic_zhe,		Cyrillic_ZHE,
+    			U0461,			U0460			] };
+    key <AB02> { [	Cyrillic_che,		Cyrillic_CHE,
+    			Cyrillic_u_macron,	Cyrillic_U_macron	] };
+    key <AB04> { [	Cyrillic_em,		Cyrillic_EM,
+    			U04C8,			U04C7			] };
+    key <AB05> { [	Cyrillic_i,		Cyrillic_I,
+			Cyrillic_i_macron,	Cyrillic_I_macron	] };
+
+    key.type[group1]="TWO_LEVEL";
+    key	<AE01> {	[		1,	    exclam 	]	};
+    key	<AE02> {	[		2,        quotedbl	]	};
+    key <AE03> {        [               3,      numerosign      ]       };
+    key <AE04> {        [               4,       semicolon      ]       };
+    key <AE05> {        [               5,         percent      ]       };
+    key <AE06> {        [               6,           colon      ]       };
+    key <AE07> {        [               7,        question      ]       };
+    key <AE08> {        [               8,        asterisk      ]       };
+    key	<AE09> {	[		9,	 parenleft	]	};
+    key	<AE10> {	[		0,	parenright	]	};
+    key	<AE11> {	[	    minus,	underscore	]	};
+    key	<AE12> {	[	    equal,	      plus	]	};
+    key <AB10> {        [          period,           comma      ]       };
+    key <BKSL> {        [       backslash,           slash      ]       };
 };
 
