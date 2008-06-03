@@ -74,7 +74,6 @@ xkb_symbols "universal" {
 
     key.type[group1]="ALPHABETIC";
 
-    key <TLDE> { [	U04EB,			U04EA			] }; // Barred O with umlaut
     key	<AE01> {	[	0x010004BB,	0x010004BA	]	};
     key <AE02> { [	U0461,			U0460			] }; // Omega
     key <AE03> { [	U04E1,			U04E0			] }; // Dze
@@ -87,11 +86,11 @@ xkb_symbols "universal" {
     key <AE10> { [	U04C8,			U04C7			] }; // N with hook
     key <AE11> { [	U04C4,			U04C3			] }; // K with hook
     key <AE12> { [	U048B,			U048A			] }; // Short I with tail
+    key <BKSL> { [	U04EB,			U04EA			] }; // Barred O with umlaut
 
     key.type[group1]="TWO_LEVEL";
     key <AB10> {        [          period,           comma      ]       };
-    key <BKSL> {        [       backslash,           slash      ]       };
-    key <LSGT> {	[            less,         greater      ]       };
+    key <LSGT> {	[           minus,         underscore      ]       };
 };
 
 partial alphanumeric_keys 
@@ -99,6 +98,7 @@ xkb_symbols "alt" {
     // 2008/04/23 Yakov Aleksandrov <bertjickty@yandex.ru>
     // 2008/04/23 Anatoliy Zhozhikov <jav@sitc.ru>
     // 2008/04/23 Aleksandr Varlamov
+    // 2008/06/02 Michael Kyraha
     include "pc/sah(basic)"
     name[Group1]= "Russia - Yakut";
 
@@ -111,7 +111,7 @@ xkb_symbols "alt" {
     key <AD01> { [	Cyrillic_shorti,	Cyrillic_SHORTI,
 			U048B,			U048A			] };
     key <AD03> { [	Cyrillic_u,		Cyrillic_U,
-			Cyrillic_u_straight,	Cyrillic_U_straight	] };
+			0x010004AF,		0x010004AE		] };
     key <AD04> { [	Cyrillic_ka,		Cyrillic_KA,
     			U04C4,			U04C3			] };
     key <AD06> { [	Cyrillic_en,		Cyrillic_EN,
@@ -121,9 +121,9 @@ xkb_symbols "alt" {
     key <AD10> { [	Cyrillic_ze,		Cyrillic_ZE,
     			U04E1,			U04E0			] };
     key <AD11> { [	Cyrillic_ha,		Cyrillic_HA,
-			Cyrillic_shha,		Cyrillic_SHHA		] };
+    			0x010004BB,		0x010004BA		] };
     key <AC07> { [	Cyrillic_o,		Cyrillic_O,
-			Cyrillic_o_bar,		Cyrillic_O_bar		] };
+    			0x010004E9,		0x010004E8		] };
     key <AC10> { [	Cyrillic_zhe,		Cyrillic_ZHE,
     			U0461,			U0460			] };
     key <AB02> { [	Cyrillic_che,		Cyrillic_CHE,
@@ -131,7 +131,7 @@ xkb_symbols "alt" {
     key <AB04> { [	Cyrillic_em,		Cyrillic_EM,
     			U04C8,			U04C7			] };
     key <AB05> { [	Cyrillic_i,		Cyrillic_I,
-			Cyrillic_i_macron,	Cyrillic_I_macron	] };
+    			U04E3,			U04E2			] }; // I with macron
 
     key.type[group1]="TWO_LEVEL";
     key	<AE01> {	[		1,	    exclam 	]	};
