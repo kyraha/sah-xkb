@@ -59,27 +59,6 @@ xkb_symbols "phonetic" {
     name[Group1]= "Sakha (Android)";
 
     key.type[group1]="ALPHABETIC";
-
-//    key	<AE01> {	[		1,	    exclam 	]	};
-//    key	<AE02> {	[		2,        	at	]	};
-//    key	<AE03> {	[		3,     Cyrillic_io 	]	};
-//    key	<AE04> {	[		4,     Cyrillic_IO	]	};
-//    key	<AE05> {	[		5, Cyrillic_hardsign   	]	};
-//    key	<AE06> {	[		6, Cyrillic_HARDSIGN	]	};
-//    key	<AE07> {	[		7,	 ampersand	]	};
-//    key	<AE08> {	[		8,        asterisk	]	};
-//    key	<AE09> {	[		9,	 parenleft	]	};
-//    key	<AE10> {	[		0,	parenright	]	};
-//    key <AE11> {	[	    minus,	underscore	]	};
-
-//    key	<AB09> {	[	   period,	   greater	]	};
-//    key	<AB10> {	[	    slash,	  question	]	};
-//    key	<AB08> {	[	    comma,	      less	]	};
-//    key	<AC10> {	[	semicolon,	     colon	]	};
-//    key	<AC11> {	[      apostrophe,	  quotedbl	]	};
-//    key	<LSGT> {	[	      bar,	 brokenbar	]	};
-
-//    key	<TLDE> {	[     Cyrillic_yu,     Cyrillic_YU	]	};
     key	<LatQ> {	[      0x010004E9,	0x010004E8	]	};	// BARRED O
     key	<LatW> {	[   Cyrillic_yeru,   Cyrillic_YERU	]	};
     key	<LatR> {	[     Cyrillic_er,     Cyrillic_ER	]	};
