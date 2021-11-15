@@ -59,6 +59,7 @@ xkb_symbols "segun" {
 
 partial alphanumeric_keys
 xkb_symbols "phonetic" {
+    include "us(basic)"
     name[Group1]= "Sakha (Android)";
 
     key.type[group1]="ALPHABETIC";
