@@ -7,24 +7,27 @@ xkb_symbols "ms" {
     include "ru(common)"
     name[Group1]= "Sakha (MS Windows)";
 
-    key.type[group1]="TWO_LEVEL";
-    key <TLDE> { [     quotedbl,     numerosign ] };
-    key <AE01> { [       exclam,       question ] };
-    key <AE02> { [      percent,       asterisk ] };
+    key.type[group1]="FOUR_LEVEL";
+    key <TLDE> { [     quotedbl,     numerosign,      grave,     asciitilde ] };
+    key <AE01> { [       exclam,       question,          1,     apostrophe ] };
+    key <AE02> { [      percent,       asterisk,          2,             at ] };
 
-    key <AE09> { [    semicolon,      parenleft ] };
-    key <AE10> { [        colon,     parenright ] };
+    key <AE09> { [    semicolon,      parenleft,          9,    bracketleft ] };
+    key <AE10> { [        colon,     parenright,          0,   bracketright ] };
+
+    key.type[group1]="TWO_LEVEL";
     key <BKSL> { [    backslash,          slash ] };
     key <AB10> { [       period,          comma ] };
     key <LSGT> { [         less,        greater ] };
 
-    key.type[group1]="ALPHABETIC";
-    key <AE03> { [  Cyrillic_io,    Cyrillic_IO ] };
-    key <AE04> { [   0x010004A5,     0x010004A4 ] };    // LIGATURE EN GHE
-    key <AE05> { [   0x01000495,     0x01000494 ] };    // GHE WITH MIDDLE HOOK
-    key <AE06> { [   0x010004E9,     0x010004E8 ] };    // BARRED O
-    key <AE07> { [   0x010004BB,     0x010004BA ] };    // SHHA
-    key <AE08> { [   0x010004AF,     0x010004AE ] };    // STRAIT U
+    key.type[group1]="FOUR_LEVEL_ALPHABETIC";
+    key <AE03> { [  Cyrillic_io,    Cyrillic_IO,      3,     numbersign ] };
+    key <AE04> { [   0x010004A5,     0x010004A4,      4,         dollar ] };    // LIGATURE EN GHE
+    key <AE05> { [   0x01000495,     0x01000494,      5,           cent ] };    // GHE WITH MIDDLE HOOK
+    key <AE06> { [   0x010004E9,     0x010004E8,      6,    asciicircum ] };    // BARRED O
+    key <AE07> { [   0x010004BB,     0x010004BA,      7,      ampersand ] };    // SHHA
+    key <AE08> { [   0x010004AF,     0x010004AE,      8,         degree ] };    // STRAIT U
+    include "level3(ralt_switch)"
 
 };
 
