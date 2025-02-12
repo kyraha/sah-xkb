@@ -28,7 +28,7 @@ xkb_symbols "ms" {
     key <AE07> { [  Cyrillic_shha,          Cyrillic_SHHA,          7,      ampersand ] };    // SHHA
     key <AE08> { [  Cyrillic_u_straight,    Cyrillic_U_straight,    8,         degree ] };    // STRAIT U
 
-    key.type[group1]="TWO_LEVEL_ALPHABETIC";
+    key.type[group1]="ALPHABETIC";
     key <AD01>	{[   Cyrillic_shorti,   Cyrillic_SHORTI  ]};
     key <AD02>	{[      Cyrillic_tse,      Cyrillic_TSE  ]};
     key <AD03>	{[        Cyrillic_u,        Cyrillic_U  ]};
