@@ -41,7 +41,7 @@ However they can be enterd with the Right Alt key.
 
 # How to install
 
-Download a zip archive from [the latest release](releases/)
+Download a zip archive from [the latest release](https://github.com/kyraha/sah-xkb/releases/latest)
 and unpack it on your local drive. Then...
 
 ## TL;DR or Scripted local user installation
