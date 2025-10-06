@@ -1,27 +1,104 @@
-# How to install
-## Ubuntu Linux
-Настоящая инструкция была написана для Ubuntu 12.04, но позднее также была опробована на Ubuntu 20.04, И даже Arch Linux with KDE Plasma. Работает одинаково. Возможно, всё это будет работать и в других версиях Линукса и других Юникс-образных системах. Если Вы знаете, что Вы делаете, то подогнать процесс установки под Вашу конфигурацию не составит большого труда.
+# Sakha keyboard layout for XKB
 
-1. Станьте рутом (root). Например командой `su -` или `sudo sh`
-1. Возьмите файл sah из директории "symbols" этого репозитория.
-1. Скопируйте его в свой /usr/share/X11/xkb/symbols/ (или туда, где ваши xkb файлы лежат).
-1. Возьмите файл evdev-sah.xml из директории "rules".
-1. Нет, этот файл целиком не надо никуда копировать. Откройте его в любом текстовом редакторе и изучите его XML содержимое.
-1. Откройте в другом окне редактора Ваш /usr/share/X11/xkb/rules/evdev.xml и найдите там место, куда вставить новый `<layout>`. Обычно они там отсортированы в алфавитном порядке по коду языка, поэтому имеет смысл воткнуть нашу "sah" раскладку между сербской "rs" и словакской "si". Совет: сделайте поиск по тексту на слово "Slovenian".
-1. Скопируйте весь текст от тэга `<layout>` до тэга `</layout>` включительно из файла evdev-sah.xml и вставьте его в Ваш системный evdev.xml - сохраните файл.
+In other languages:
+* [Есть версия этой инструкции по русски](README.ru.md)
 
-Всё. После этого в настройках многоязыковой клавиатуры должен появиться язык "Sakha" с разными вариантами раскладок. "Settings" -> "Region & Language" -> "Input Sources" -> "+". Ищите в разделе "Other" на букву "S" (Sakha). Если не появился, попробуйте перезагрузить Х. Например, "Log Out" а потом обратно "Log In".
+# Variants
 
-## Варианты раскладок
-* MS Windows (default) - [почти] в точности повторяет раскладку от Майкрософт, где пять якутских букв ҤҔӨҺҮ расположены по верхнему ряду клавиатуры вместо цифр 4-8. В отличие от MS Windows, присутствует русская буква Ё на цифре 3, что делает алфавит полным и поэтому не требует использования отдельной русской раскладки. Сдвоенная буква Дь тоже убрана за ненадобностью и клавиша 2 используется для других полезных знаков. Цифры можно набирать, используя правую клавишу Alt. Экспериментируйте.
-* he5yH - Старая ҺӨҔҮҤ раскладка, которая была создана давно, ещё в начале этого столетия, когда никаких стандартов не существовало. Оставлена для обратной совместимости и для любителей ретро.
-* Phonetic (Android) - альтернативная раскладка, экспериментальная, фонетически напоминает английскую QWERTY, в точности как на телефонах Андроид с драйвером AnySoftKeyboard, и использует ровно 26 алфавитных клавиши минимальной английской клавиатуры, что делает её совместимой с заказными миниатюрными клавиатурами (типа пульт ДУ для "умных" телевизоров). А ещё может быть полезной для тех кто привык к QWERTY, т.к. не требует переучивания на ЙЦУКЕНГ и никаких дополнительных наклеек. К тому же не содержит лишних (русских) букв, таких как Я, Ё, Ж, Ш и т.д., хотя доступ к ним всё-равно есть через правую клавишу ALT (см. карту в Gnome).
+This Sakha keyboard layout comes with three distinct variants.
 
-Раскладка с использованием ALT по постановлению Правительства РС(Я) из данной разработки убрана, как не имеющая практической ценности. К тому же, она уже реализована в последних дистрибутивах Линукс в языковом разделе "Russian" под вариантом "Yakut".
+## MS Windows (default)
 
-PS: Если у Вас не Убунту Линукс, то настройки xkb могут оказаться в /usr/X11R6/lib/X11/xkb/ или /etc/X11/xkb/ или в любом другом месте. Ищите внимательно.
+(Almost) exact replica of the Russian layout by Microsoft Windows
+with five "extra" Sakha letters ҤҔӨҺҮ located in the top row replacing the numbers from 4 to 8.
+But almost exact is not exact. This variant comes with a few tweaks:
+* Unlike the original Windows one this layout has the Russian letter "Ё" replacing the numeric key "3" which completes the Russian alphabet and let one layout be used for both languages.
+* The ligature "Дь" is omitted as it's not actually used in Sakha typography.
+* The numerals, besides the numpad, can be typed with Alt-R (Multi key Level3 shift).
 
-## Вариант MS Windows
 ![WinKeys variant layout](./files/sah-xkb-win-layout.png)
 
-:copyright: 2020 Кыраһа Михаил
+## he5yH
+
+The legendary layout also known as "ҺӨҔҮҤ" that existed since the begining of the century
+and become a de facto standard when there were no standards. Added as a variant to this
+layout for backward compatibility and for retro enthusiasts.
+
+![Segun variant layout](./files/sah-xkb-seg-layout.png)
+
+## Phonetic (Android)
+
+Alternative keyboard layout (experimental) that is phonetically follows the English QWERTY.
+It existed as a variant of a Sakha keyboard for Android as an extention for AnySoftKeyboard.
+The main advantage of this variant is that it uses exactly 26 alphabetiical keys of a
+standard QWERTY keyboard which makes it compatible with custom portable keyboards
+such as e.g. "Smart" TV remotes. It also can be used by those who are used to QWERTY
+layouts and don't want to learn ЙЦУКЕНГ. This phonetic variant omits "purely Russian"
+cyrillic letters that are not natural in Sakha language, e.g. Я, Ё, Ж, Ш, etc.
+However they can be enterd with the Right Alt key.
+
+![Phonetic variant layout](./files/sah-xkb-pho-layout.png)
+
+# How to install
+
+Download a zip archive from [the latest release](https://github.com/kyraha/sah-xkb/releases/latest)
+and unpack it on your local drive. Then...
+
+## TL;DR or Scripted local user installation
+
+1. `cd <path/to/unpacked/sah-xkb>`
+1. `./install-local.sh`
+
+Then open your system settings, keyboard, or language, or input methods,
+or whatever the option to add new keyboard layouts in your system is.
+The Sakha language should now be available in the list.
+
+## No scripts, manual local user installation
+
+Don't trust scripts? -- No problem. You can install this package manually too.
+
+1. Make sure you don't have other XKB settings in your local `$HOME/.config/xkb`
+1. If you have other settings make sure you won't overwrite them with these manual steps
+1. `mkdir -p $HOME/.config/xkb`
+1. `cp -r sah-xkb/rules $HOME/.config/xkb/`
+1. `cp -r sah-xkb/symbols $HOME/.config/xkb/`
+
+Then open your system settings, keyboard, or language, or input methods,
+or whatever the option to add new keyboard layouts in your system is.
+The Sakha language should now be available in the list.
+
+## System wide installation
+
+To install the custom keyboard layout on the whole system one must have a root (administrator)
+permissions on that system. The following instructions assume that you have gained
+such access in a terminal as well as you take full responsibility on any damages to
+the system you may or may not inadvertently caused while possessing the rights.
+Search and read more about `su -` or `sudo sh` commands. You've been warned.
+
+Another assumption is that the XKB configuration files reside in `/usr/share/X11/xkb`
+in your system.
+
+This approach has been tested in Ubuntu 12.04, and later in Ubuntu 20.04, and even
+in Arch Linux with KDE Plasma 6 on Wayland. It has worked equally well on all of
+aforementioned systems.
+Probability is high, that it will work in any other Linux and Unix-like systems that
+use XKB (X keyboard extension). You may alter the process as you feel fit
+if you know what you're doing.
+
+1. Become root
+1. Copy file `symbols/sakha` to `/usr/share/X11/xkb/symbols/`
+1. Open `rules/evdev.xml` in a text editor and study its XML content
+1. Open `/usr/share/X11/xkb/rules/evdev.xml` in a separate editor and find a spot
+where you can insert a new `<layout>` item. Usually the "layouts" in this file are sorted in
+the alphabetical order. So it might make sense to insert "sah" between "rs" and "si".
+Hint: serch for "Slovenian".
+1. Copy and paste the block between and including the `<layout>` and `</layout>`
+from the downloaded file into the system `evdev.xml`.
+1. Save the file.
+
+That's it. In the system settings where you usually can activate keyboard layouts you should
+see the new language "Sakha" with a few variants. Depending on your Desktop Environment and
+Window Manager it could be: "Settings" -> "Region & Language" -> "Input Sources" -> "+ Add".
+Try "More" or "Other". You might need to logout and log back in again if it doesn't appear.
+
+:copyright: 2025 Kyraha Mikhail

@@ -4,21 +4,17 @@
   <layoutList>
     <layout>
       <configItem>
-        <name>sah</name>
-        
-        <shortDescription>sa</shortDescription>
+        <name>sakha</name>
+        <shortDescription>sah</shortDescription>
         <description>Sakha</description>
+        <countryList>
+          <iso3166Id>RU</iso3166Id>
+        </countryList>
         <languageList>
           <iso639Id>sah</iso639Id>
         </languageList>
       </configItem>
       <variantList>
-        <variant>
-          <configItem>
-            <name>ms</name>
-            <description>Sakha (MS Windows)</description>
-          </configItem>
-        </variant>
         <variant>
           <configItem>
             <name>segun</name>
@@ -28,7 +24,10 @@
         <variant>
           <configItem>
             <name>phonetic</name>
-            <description>Sakha Phonetic (Android)</description>
+            <description>Sakha (US, Phonetic)</description>
+            <countryList>
+              <iso3166Id>US</iso3166Id>
+            </countryList>
           </configItem>
         </variant>
       </variantList>
