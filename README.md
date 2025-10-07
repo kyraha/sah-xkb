@@ -1,6 +1,7 @@
 # Sakha keyboard layout for XKB
 
 In other languages:
+* [Сахалыы маны аах](README.sah.md)
 * [Есть версия этой инструкции по русски](README.ru.md)
 
 # Variants
@@ -28,7 +29,7 @@ layout for backward compatibility and for retro enthusiasts.
 
 ## Phonetic (Android)
 
-Alternative keyboard layout (experimental) that is phonetically follows the English QWERTY.
+Alternative keyboard layout (experimental) that phonetically follows the English QWERTY.
 It existed as a variant of a Sakha keyboard for Android as an extention for AnySoftKeyboard.
 The main advantage of this variant is that it uses exactly 26 alphabetiical keys of a
 standard QWERTY keyboard which makes it compatible with custom portable keyboards
@@ -46,6 +47,9 @@ and unpack it on your local drive. Then...
 
 ## TL;DR or Scripted local user installation
 
+Locate the `install-local.sh` in the unpacked folder and run it. That's all.
+
+Or in terminal, run two commands:
 1. `cd <path/to/unpacked/sah-xkb>`
 1. `./install-local.sh`
 
