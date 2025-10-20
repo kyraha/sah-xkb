@@ -24,7 +24,7 @@
         <variant>
           <configItem>
             <name>phonetic</name>
-            <description>Sakha (US, Phonetic)</description>
+            <description>Sakha (US, Phonetic + Symbolic)</description>
             <countryList>
               <iso3166Id>US</iso3166Id>
             </countryList>
