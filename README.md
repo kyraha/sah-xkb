@@ -32,11 +32,12 @@ layout for backward compatibility and for retro enthusiasts.
 Alternative keyboard layout (experimental) that phonetically follows the English QWERTY.
 It existed as a variant of a Sakha keyboard for Android as an extention for AnySoftKeyboard.
 The main advantage of this variant is that it uses exactly 26 alphabetiical keys of a
-standard QWERTY keyboard which makes it compatible with custom portable keyboards
+standard QWERTY keyboard for faster typing in Sakha. This also makes it compatible with custom portable keyboards
 such as e.g. "Smart" TV remotes. It also can be used by those who are used to QWERTY
 layouts and don't want to learn ЙЦУКЕНГ. This phonetic variant omits "purely Russian"
-cyrillic letters that are not natural in Sakha language, e.g. Я, Ё, Ж, Ш, etc.
-However they can be enterd with the Right Alt key.
+cyrillic letters that phonetically are not natural in Sakha language: e.g. Я, Ё, Ж, Ш, etc.
+However they still can be enterd with the Right Alt key. There are many other useful symbols
+available via Right Alt key - see the picture below.
 
 ![Phonetic variant layout](./files/sah-xkb-pho-layout.png)
 
