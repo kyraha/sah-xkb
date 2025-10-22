@@ -1,6 +1,9 @@
 //
 // sakha cyrillic keyboard
 // 2012 Kyraha http://www.kyraha.com/
+// 
+// 2025 v1.1 added more characters on AltGr layer in the phonetic variant
+//
 
 partial default alphanumeric_keys
 xkb_symbols "ms" {
@@ -92,16 +95,15 @@ xkb_symbols "phonetic" {
 
     key.type[group1]="FOUR_LEVEL_SEMIALPHABETIC";
     key <LatR> { [  Cyrillic_er,        Cyrillic_ER,    U20BD,          cent ] };       // RUBLE SIGN
-    key <LatT> { [  Cyrillic_te,        Cyrillic_TE,    emdash,         endash ] };
-    key <LatP> { [  Cyrillic_pe,        Cyrillic_PE,    paragraph,      copyright ] };
-    key <LatM> { [  Cyrillic_em,        Cyrillic_EM,    trademark,      telephone ] };
+    key <LatP> { [  Cyrillic_pe,        Cyrillic_PE,    copyright,      trademark ] };
+    key <LatM> { [  Cyrillic_em,        Cyrillic_EM,    emdash,         endash ] };
 
     key.type[group1]="FOUR_LEVEL_ALPHABETIC";
     key <LatQ> { [  Cyrillic_o_bar,     Cyrillic_O_bar, Cyrillic_schwa, Cyrillic_SCHWA ] };
     key <LatW> { [  Cyrillic_yeru,      Cyrillic_YERU,  U04D5,          U04D4 ] };  // LIGATURE A IE 
     key <LatE> { [  Cyrillic_e,         Cyrillic_E,     Cyrillic_ie,    Cyrillic_IE  ] };
     //  <LatR> defined as semialphabetic
-    //  <LatT> defined as semialphabetic
+    key <LatT> { [  Cyrillic_te,        Cyrillic_TE,    Cyrillic_ghe_bar, Cyrillic_GHE_bar ] };
     key <LatY> { [Cyrillic_u_straight,Cyrillic_U_straight,Cyrillic_u_straight_bar,Cyrillic_U_straight_bar] };
     key <LatU> { [  Cyrillic_u,         Cyrillic_U,     Cyrillic_yu,    Cyrillic_YU ] };
     key <LatI> { [  Cyrillic_i,         Cyrillic_I,     Ukrainian_i,    Ukrainian_I ] };
@@ -110,7 +112,7 @@ xkb_symbols "phonetic" {
 
     key <LatA> { [  Cyrillic_a,         Cyrillic_A,     Cyrillic_ya,    Cyrillic_YA ] };
     key <LatS> { [  Cyrillic_es,        Cyrillic_ES,    Cyrillic_sha,   Cyrillic_SHA ] };
-    key <LatD> { [  Cyrillic_de,        Cyrillic_DE,    Cyrillic_ghe_bar, Cyrillic_GHE_bar ] };
+    key <LatD> { [  Cyrillic_de,        Cyrillic_DE, Cyrillic_zhe_descender, Cyrillic_ZHE_descender ] };
     key <LatF> { [  U0495,              U0494,          Cyrillic_ef,    Cyrillic_EF  ] };   // GHE WITH MIDDLE HOOK
     key <LatG> { [  Cyrillic_ghe,       Cyrillic_GHE,   Cyrillic_zhe,   Cyrillic_ZHE ] };
     key <LatH> { [  Cyrillic_shha,      Cyrillic_SHHA,  Cyrillic_shcha, Cyrillic_SHCHA ] };
